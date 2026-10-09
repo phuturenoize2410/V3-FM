@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --finmod-bg: #f6f4ef;
+  --finmod-surface: #fbfaf7;
+  --finmod-surface-muted: #f0eee8;
+  --finmod-border: #dedbd3;
+  --finmod-border-strong: #c9c5bb;
+  --finmod-text: #17202b;
+  --finmod-text-muted: #66707d;
+  --finmod-navy: #0d1b2a;
+  --finmod-navy-soft: #17324d;
+  --finmod-positive: #2f6b57;
+  --finmod-warning: #9a6b28;
+  --finmod-negative: #9a4747;
+  --finmod-info: #3d6478;
+  --finmod-focus: #315f7d;
+  --finmod-radius-sm: 6px;
+  --finmod-radius-md: 10px;
+  --finmod-shadow-sm: 0 1px 2px rgb(13 27 42 / 0.04), 0 1px 5px rgb(13 27 42 / 0.035);
+  --finmod-shadow-md: 0 8px 24px rgb(13 27 42 / 0.07);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--finmod-bg);
+  color: var(--finmod-text);
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.finmod-number,
+.finmod-financial,
+td[data-numeric="true"],
+th[data-numeric="true"] {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+.finmod-surface {
+  background: var(--finmod-surface);
+  border: 1px solid var(--finmod-border);
+  border-radius: var(--finmod-radius-md);
+  box-shadow: var(--finmod-shadow-sm);
+}
+
+.finmod-section-title {
+  color: var(--finmod-navy);
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.finmod-muted {
+  color: var(--finmod-text-muted);
+}
+
+.finmod-focus-ring:focus-visible {
+  outline: 2px solid var(--finmod-focus);
+  outline-offset: 2px;
+}
+
+/* Sleek institutional scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Financial modeling input styling - Institutional "Yellow Cell" convention */
+.finmod-input {
+  background-color: rgb(254 243 199 / 0.5);
+  border: 1px solid rgb(245 158 11 / 0.4);
+  color: #78350f;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+}
+.finmod-input:hover {
+  background-color: rgb(254 243 199 / 0.8);
+  border-color: rgb(245 158 11 / 0.7);
+}
+.finmod-input:focus {
+  background-color: #ffffff;
+  border-color: #0284c7;
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(2 132 199 / 0.2);
+  color: #0f172a;
+}
+
+/* Sticky column shadow separator */
+.finmod-sticky-col {
+  box-shadow: 3px 0 6px -2px rgba(15, 23, 42, 0.08);
+}
+
+::selection {
+  background: #d7e2e8;
+  color: var(--finmod-navy);
+}
